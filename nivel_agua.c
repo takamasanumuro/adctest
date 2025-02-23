@@ -9,6 +9,41 @@ caso contrário o VSCode não achará os caminhos de inclusão das bibliotecas
 */
 
 
+/* Fluxograma das conexões do sistema
+         +------------------+
+         |    BitdogLab     |
+         | (Processamento)  |
+         +--------+---------+
+                  |
+                  v
+         +------------------+
+         |    Driver ADC    |
+         | (Conversão A/D)  |
+         +--------+---------+
+                  |
+                  v
+         +------------------+
+         |   Placa de Nível  |
+         | (Interface ADC)   |
+         +--------+---------+
+                  |
+                  v
+        +----------------------+
+        |     Caixa d'Água     |
+        |  +----------------+  |
+        |  |  (Sensor Alto) |  |
+        |  |      [🔴]      |  | <--- Detecta nível alto
+        |  +----------------+  |
+        |                      |
+        |  +----------------+  |
+        |  | (Sensor Baixo)  |  |
+        |  |      [🔵]      |  | <--- Detecta nível baixo
+        |  +----------------+  |
+        +----------------------+
+
+* */
+
+
 /* Definição dos limiares obtidos experimentalmente para a detecção do nível do líquido
 Valores abaixo do limiar indicam condutividade alta, enquanto valores acima do limiar indicam condutividade baixa 
 */
